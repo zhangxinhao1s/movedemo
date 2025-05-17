@@ -33,7 +33,7 @@
           <p class="item-title">版本前瞻版本前瞻版本前瞻版本前瞻版本前瞻</p>
           <p class="item-describe">恐龙岛</p>
           <div class="item-names">
-            <div>{{ item.title }}</div>
+            <div class="item-names-name">{{ item.title }}</div>
             <div class="thumbs">
               <img class="icon" src="../assets/thumbsUp.svg" alt="">
               <span>{{ item.type ? '视频' : '图片' }}</span>
@@ -232,7 +232,13 @@ export default defineComponent({
   font-size: 12px;
   color: #b0b0b0;
 }
-
+.item-names-name{
+    white-space: nowrap;      /* 禁止换行 */
+  overflow: hidden;        /* 隐藏溢出内容 */
+  text-overflow: ellipsis; /* 显示省略号 */
+  width: 100px;   
+  text-align: left;
+}
 .thumbs {
   display: flex;
   align-items: center;
@@ -241,6 +247,6 @@ export default defineComponent({
 
 .icon {
   height: 15px;
-  width: 15px;
+  width: 15px !important;
 }
 </style>
