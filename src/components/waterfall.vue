@@ -104,6 +104,7 @@ export default defineComponent({
 
     // 处理视频点击
     const handleVideoClick = (item: ListItem, event: MouseEvent) => {
+      //@ts-ignore
       const videoElement = event.currentTarget?.querySelector('video') as HTMLVideoElement
       
       // 暂停当前正在播放的视频
